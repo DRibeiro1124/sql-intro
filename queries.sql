@@ -139,3 +139,22 @@ CompanyDatabase> SELECT * FROM "Employees";
 SELECT 10
 Time: 0.013s
 
+/*USE SQL JOINS TO QUERY*/
+
+CompanyDatabase> SELECT * FROM "Employees" JOIN "Departments" ON "Departments"."Id" = "Employees"."DepartmentId";
++----------------+---------+--------------------------+----------------+------------+----+-------------+--------------+-----------------+----------------+----+
+| FullName       | Salary  | JobPosition              | PhoneExtension | IsPartTime | Id | ParkingSpot | DepartmentId | Name            | BuildingNumber | Id |
+|----------------+---------+--------------------------+----------------+------------+----+-------------+--------------+-----------------+----------------+----|
+| Dino Ribeiro   | 100000  | Software Engineer        | 101            | False      | 1  | <null>      | 1            | Headquarters    | 1              | 1  |
+| Dawn Ribeiro   | 200000  | Senior Software Engineer | 100            | False      | 0  | <null>      | 1            | Headquarters    | 1              | 1  |
+| BJ Ribeiro     | 150000  | Senior Project Manager   | 102            | False      | 2  | <null>      | 1            | Headquarters    | 1              | 1  |
+| Kahlua Ribeiro | 35000   | Junior Analyst           | 103            | True       | 3  | <null>      | 1            | Headquarters    | 1              | 1  |
+| Becker Ribeiro | 1250000 | Chief Executive Officer  | 500            | False      | 6  | <null>      | 1            | Headquarters    | 1              | 1  |
+| Salah Ribeiro  | 85000   | Head Chef                | 200            | False      | 5  | <null>      | 2            | Kitchen         | 2              | 2  |
+| Gordon Ramsey  | 100     | Cook                     | 555            | True       | 10 | <null>      | 2            | Kitchen         | 2              | 2  |
+| Gaspar Ribeiro | 40000   | Head of Security         | 104            | False      | 4  | <null>      | 3            | Security Office | 3              | 3  |
+| Bobby Firmino  | 38000   | Private Investigator     | 444            | False      | 11 | <null>      | 3            | Security Office | 3              | 3  |
+| Jason Perry    | 450     | Software Developer       | 999            | True       | 8  | <null>      | 1            | Headquarters    | 1              | 1  |
++----------------+---------+--------------------------+----------------+------------+----+-------------+--------------+-----------------+----------------+----+
+SELECT 10
+Time: 0.016s
